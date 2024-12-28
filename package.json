@@ -1,0 +1,43 @@
+{
+  "name": "validation-hub",
+  "version": "1.0.0",
+  "description": "The validation service is designed to filter, pre-validate, and process requests before storing them in the database. It performs custom validation checks to ensure data integrity and compliance with business rules. The service responds with a status indicating the outcome: OK, KO, or ENRICH, based on the validation results.",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpileOnly src/server.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayose Figuera Alfonso",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "supertest": "^6.3.0",
+    "@types/node": "^18.0.0",
+    "@types/express": "^4.17.13"
+  },
+  "engines": {
+    "node": ">=21.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayosefiguera/validation-hub"
+  },
+  "compilerOptions": {
+    "target": "ES12",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  }
+}
